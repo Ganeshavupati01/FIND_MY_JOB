@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Home Page</title>
+   
+   <style>
+     body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: black;
+        }
+        p {
+            text-align: center;
+            color: #666;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .container1 {
+        display: flex;
+    }
+    .left-section {
+        width: 200px;
+        background-color: #f0f0f0;
+        height:1000px;
+    }
+    .options {
+        padding: 20px;
+    }
+    .options a {
+        display: block;
+        padding: 10px 0;
+        text-decoration: none;
+        color: #333;
+    }
+    .options a:hover {
+        background-color: #ddd;
+    }
+    .right-section {
+        flex-grow: 1;
+        padding: 20px;
+    }
+    iframe {
+        border: none;
+        width: 100%;
+        height: 60%;
+    }
+    </style>
+    
+</head>
+<body>
+
+<header>
+    <h1>Find My Job</h1>
+</header>
+
+<nav>
+
+    <a href="#" onclick="openhome()">HOME</a>
+    <a href="#" onclick="openaccount()">Account</a>
+    <a href="alogin.php">LogIn</a>
+    <a href="#"onclick="openabout()">About </a>
+</nav>
+
+
+<div class="container1">
+    <div class="left-section">
+        <div class="options">
+            <a href="#" onclick="openInbox()">Inbox</a>
+            <a href="#" onclick="openSentbox()">Sentbox</a>
+            <a href="#" onclick="openRequestbox()">Requestbox</a>
+            <a href="#" onclick="openAccepted()">Accepted</a>
+            <a href="#" onclick="openCompleted()">Completed</a>
+
+
+        </div>
+    </div>
+    <div class="right-section">
+        <iframe id="frame" src="" frameborder="0"></iframe>
+    </div>
+</div>
+
+<script>
+    function openInbox() {
+        document.getElementById('frame').src = 'inbox.php';
+    }
+
+    function openSentbox() {
+        document.getElementById('frame').src = 'sentbox.php';
+    }
+    function openRequestbox() {
+        document.getElementById('frame').src = 'requestbox.php';
+    }
+    function openAccepted() {
+        document.getElementById('frame').src = 'accept.php';
+    }
+    function openaccount() {
+        document.getElementById('frame').src = 'home1.php';
+    }
+    function openhome() {
+        document.getElementById('frame').src = 'posts.html';
+    }
+    function openCompleted() {
+        document.getElementById('frame').src = 'complete.php';
+    }
+</script>
+<footer>
+    <p>&copy; 2024 Colorful Home Page. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
