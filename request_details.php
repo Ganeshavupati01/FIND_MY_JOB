@@ -18,9 +18,9 @@ use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     
     //require 'vendor/autoload.php'; // Path to PHPMailer autoload.php file
-    require 'PHPMailer/Exception.php';
-    require 'PHPMailer/PHPMailer.php';
-    require 'PHPMailer/SMTP.php';
+    require 'Exception.php';
+    require 'PHPMailer.php';
+    require 'SMTP.php';
 
 
 session_start();
